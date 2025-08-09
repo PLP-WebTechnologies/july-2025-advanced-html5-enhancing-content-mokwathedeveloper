@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        header, main, footer {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enhanced Form</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Registration</h2>
+            <form id="registration-form" autocomplete="on">
+                <fieldset>
+                    <legend>Registration Form</legend>
+                    <p>
+                        <label for="user-id">User ID:</label>
+                        <input type="text" id="user-id" name="user-id" value="12345" readonly>
+                    </p>
+                    <p>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required aria-required="true" placeholder="John Doe" autocomplete="name">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="johndoe@example.com" autocomplete="email">
+                    </p>
+                    <p>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" aria-describedby="password-hint" autocomplete="new-password">
+                        <span id="password-hint">Password must be at least 8 characters long.</span>
+                    </p>
+                    <p>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" autocomplete="bday">
+                    </p>
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" aria-describedby="phone-hint" placeholder="123-456-7890" autocomplete="tel">
+                        <span id="phone-hint">Format: 123-456-7890</span>
+                    </p>
+                    <p>
+                        <label for="guests">Number of Guests:</label>
+                        <input type="number" id="guests" name="guests" min="1" max="10">
+                    </p>
+                    <button type="submit">Register</button>
+                </fieldset>
+            </form>
+            <div role="status" aria-live="polite"></div>
+        </section>
+        <section>
+            <h2>Registration Steps</h2>
+            <ol>
+                <li>Fill out the form.</li>
+                <li>Click "Register".</li>
+                <li>Verify your email.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Sample Audio</h2>
+            <audio controls>
+                <source src="sample.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+        <section>
+            <h2>User Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>Confirmed</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">End of user list</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Enhanced Form</p>
+    </footer>
+</body>
+</html>
