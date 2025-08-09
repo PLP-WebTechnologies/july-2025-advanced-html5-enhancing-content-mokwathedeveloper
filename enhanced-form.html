@@ -4,81 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enhanced Form</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        header, main, footer {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        form {
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        fieldset {
-            border: none;
-            padding: 0;
-            margin: 0;
-        }
-        legend {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        p {
-            margin-bottom: 10px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="date"],
-        input[type="tel"],
-        input[type="number"] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #777;
-        }
-    </style>
+    
 </head>
 <body>
     <header>
@@ -104,7 +30,7 @@
                     </p>
                     <p>
                         <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" aria-describedby="password-hint" autocomplete="new-password">
+                        <input type="password" id="password" name="password" aria-describedby="password-hint" autocomplete="new-password" minlength="8">
                         <span id="password-hint">Password must be at least 8 characters long.</span>
                     </p>
                     <p>
